@@ -126,8 +126,31 @@ public class Comercio01 {
                             sueldoFinal);
 
                 } else {
-                    if (productividad >= 200) {
+                    if (productividad >= 200 && productividad <= 500) {
                         bono = 200;
+                        sueldoFinal = adicionalSeguro + bono + sueldoBasico;
+                        System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+                                + "Nombres: %s\n"
+                                + "Apellidos: %s\n"
+                                + "Edad: %d\n"
+                                + "Sueldo: $%.2f\n"
+                                + "Número de productos vendidos: %d\n"
+                                + "\tProductidad: %.2f\n"
+                                + "\tBono: $%.2f\n"
+                                + "Adicional del seguro: $%.2f\n\n"
+                                + "Sueldo final: $%.2f\n",
+                                nombre,
+                                apellido,
+                                edad,
+                                sueldoBasico,
+                                numeroProductos,
+                                productividad,
+                                bono,
+                                adicionalSeguro,
+                                sueldoFinal);
+
+                    } else {
+                        bono = 300;
                         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
                         System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
                                 + "Nombres: %s\n"
